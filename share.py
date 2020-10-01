@@ -3,7 +3,6 @@
 from  tkinter import *
 from tkinter import messagebox
 from tkinter import filedialog
-import win32com.client
 from socket import *
 from tkinter import ttk
 from time import *
@@ -11,7 +10,7 @@ from time import *
 global senderipaddress
 global recevieripaddress
 
-sp = win32com.client.Dispatch('SAPI.spvoice')
+# sp = win32com.client.Dispatch('SAPI.spvoice')
 
 class recvroot:
 	def __init__(self, root):
@@ -112,7 +111,6 @@ def recv_file():
 	root = Tk()
 	root.title("Reciver")
 	root.geometry("1360x768")
-	root.wm_iconbitmap('book.ico')
 	menubar = Menu(root)
 	root.config(menu = menubar)
 
@@ -197,7 +195,7 @@ def send_file():
 	root = Tk()
 	root.title("sender")
 	root.geometry("1360x768")
-	root.wm_iconbitmap('book.ico')
+	# root.wm_iconbitmap('book.ico')
 
 	menubar = Menu(root)
 	root.config(menu = menubar)
